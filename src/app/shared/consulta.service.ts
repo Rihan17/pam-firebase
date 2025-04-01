@@ -12,6 +12,7 @@ export class ConsultaService {
 
   listConsultasRef: AngularFireList<any>;
   consultaRef: AngularFireObject<any>;
+
   constructor(private db: AngularFireDatabase) {
     this.listConsultasRef = db.list('/consulta'); //your path api
  

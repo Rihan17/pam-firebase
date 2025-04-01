@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-editar-consulta',
   templateUrl: './editar-consulta.page.html',
   styleUrls: ['./editar-consulta.page.scss'],
-  standalone: false
+  standalone: false,
 })
 export class EditarConsultaPage implements OnInit {
 

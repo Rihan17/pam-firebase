@@ -12,11 +12,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'marcar-consulta/:id',
+    path: 'marcar-consulta',
     loadChildren: () => import('./marcar-consulta/marcar-consulta.module').then( m => m.MarcarConsultaPageModule)
   },
   {
-    path: 'editar-consulta',
+    path: 'editar-consulta/:id',
     loadChildren: () => import('./editar-consulta/editar-consulta.module').then( m => m.EditarConsultaPageModule)
   },
   {
