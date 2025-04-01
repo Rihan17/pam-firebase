@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>consultas</ion-title>
+    <ion-title>Lista das Consultas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">consultas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-list-header>
+      Agendamentos
+    </ion-list-header>
+    <ion-item *ngFor="let consulta of consultas">
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{consulta.nome}}
+        </h5>
+        <p>s
+          <ion-icon name="call"></ion-icon> {{consulta.telefone}}
+        </p>
+      </ion-label>
+        <div class="item-note" item-end>
+          <button ion-button clear [routerLink]="['/editar-consulta/', consulta.$key]">
+            <ion-icon name="create" style="zoom: 2.0;"></ion-icon>
+          </button>
+          <button ion-button clear>
+            <ion-icon name="trash" style="zoom: 2.0;"></ion-icon>
+          </button>
+        </div>
+    </ion-item>
+  </ion-list>
 </ion-content>

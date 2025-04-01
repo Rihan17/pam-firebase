@@ -31,7 +31,7 @@ export class ConsultaService {
   }
   // Get List
   getBookingList() {
-    this.listConsultasRef = this.db.list('/consulta');
+    // this.listConsultasRef = this.db.list('/consulta');
     return this.listConsultasRef;
   }
 }
